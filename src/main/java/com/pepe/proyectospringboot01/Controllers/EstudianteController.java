@@ -5,6 +5,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -21,10 +22,15 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.pepe.proyectospringboot01.Models.Estudiante;
 
+import tools.jackson.databind.ObjectMapper;
+
 
 @Controller
 @RequestMapping("/api/v1")
 public class EstudianteController {
+	@Autowired
+	ObjectMapper objectMapper;
+	
 	private static Map<String, Estudiante> estudiantes = new HashMap<>();
 	static {
 		Estudiante e1 = new Estudiante(1,"Pepe","Perales");
@@ -78,5 +84,8 @@ public class EstudianteController {
 		estudiantes.put(id, estOriginal);
 		return new ResponseEntity<>("Se modificó al estudiante "+ id, HttpStatus.OK);
 	}
-	
+	@PatchMapping(path="/estudiante/patch/{id}", consumes="application/json-patch+json")
+	public ResponseEntity<String> editarConJsonPatch(){
+		// Terminar de definir Json Patch
+	}
 }
