@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -30,9 +32,9 @@ import com.pepe.proyectospringboot01.Models.Estudiante;
 @Controller
 @RequestMapping("/api/v1")
 public class EstudianteController {
-	@Autowired
-	ObjectMapper objectMapper;
-	//private ObjectMapper objectMapper = new ObjectMapper();
+	//@Autowired
+	//ObjectMapper objectMapper;
+	private ObjectMapper objectMapper = new ObjectMapper();
 	
 	private static Map<String, Estudiante> estudiantes = new HashMap<>();
 	static {
@@ -100,5 +102,26 @@ public class EstudianteController {
 			e.printStackTrace();
 			return new ResponseEntity<>("Error fatal al modificar el estudiante "+id,HttpStatus.INTERNAL_SERVER_ERROR);
 		}
+	}
+	@GetMapping("/estudiante/estado")
+	public ResponseEntity<String> customHeaders(){
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("color", "Amarillo");
+		headers.add("Cantidad-Almacenes", "245");
+		headers.add("Permiso-cifrado", "true");
+		return new ResponseEntity<>("Esta respuesta tiene headers personalizados",headers,HttpStatus.OK);
+	}
+	@GetMapping("/estudiante/edad") // http://localhost:7001/api/v1/estudiante/edad?nacimiento=1990
+	public ResponseEntity<String> edad(@RequestParam("nacimiento") int nacimiento){
+		if(estaEnElFuturo(nacimiento)) {
+			return ResponseEntity.badRequest().body("El año de nacimiento no puede estar en el futuro");
+		}
+		return ResponseEntity.status(HttpStatus.OK).body("La edad es "+calculoEdad(nacimiento)+" años.");
+	}
+	private int calculoEdad(int nacimiento) {
+		return java.time.Year.now().getValue() - nacimiento;
+	}
+	private boolean estaEnElFuturo(int nacimiento) {
+		return nacimiento > java.time.Year.now().getValue();
 	}
 }
