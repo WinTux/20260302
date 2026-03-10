@@ -1,0 +1,64 @@
+2026-03-09 18:40:48 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Starting ProyectoSpringBoot01ApplicationTests using Java 25.0.2 with PID 215906 (started by rusok in /home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01)
+2026-03-09 18:40:48 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 18:40:50 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-09 18:40:50 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Started ProyectoSpringBoot01ApplicationTests in 2.396 seconds (process running for 3.781)
+2026-03-09 18:41:12 [main] INFO  c.p.p.ProyectoSpringBoot01Application - Starting ProyectoSpringBoot01Application v1.0 using Java 25.0.2 with PID 217888 (/home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01/target/ProyectoSpringBoot01-1.0.jar started by rusok in /home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01)
+2026-03-09 18:41:12 [main] INFO  c.p.p.ProyectoSpringBoot01Application - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 18:41:13 [main] INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 7001 (http)
+2026-03-09 18:41:13 [main] INFO  o.a.c.core.StandardService - Starting service [Tomcat]
+2026-03-09 18:41:13 [main] INFO  o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-09 18:41:13 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1251 ms
+2026-03-09 18:41:14 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-09 18:41:14 [main] INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 7001 (http) with context path '/'
+2026-03-09 18:41:14 [main] INFO  c.p.p.ProyectoSpringBoot01Application - Started ProyectoSpringBoot01Application in 2.641 seconds (process running for 3.098)
+2026-03-09 18:41:39 [http-nio-7001-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09 18:41:39 [http-nio-7001-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-09 18:41:39 [http-nio-7001-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 4 ms
+2026-03-09 18:56:22 [SpringApplicationShutdownHook] INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-09 18:56:22 [tomcat-shutdown] INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-03-09 18:59:08 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Starting ProyectoSpringBoot01ApplicationTests using Java 25.0.2 with PID 300894 (started by rusok in /home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01)
+2026-03-09 18:59:08 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 18:59:09 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-09 18:59:09 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Started ProyectoSpringBoot01ApplicationTests in 1.784 seconds (process running for 2.821)
+2026-03-09 18:59:30 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Starting ProyectoSpringBoot01ApplicationTests using Java 25.0.2 with PID 302848 (started by rusok in /home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01)
+2026-03-09 18:59:30 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 18:59:31 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-09 18:59:31 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Started ProyectoSpringBoot01ApplicationTests in 1.814 seconds (process running for 2.914)
+2026-03-09 18:59:51 [main] INFO  c.p.p.ProyectoSpringBoot01Application - Starting ProyectoSpringBoot01Application v1.0 using Java 25.0.2 with PID 304656 (/home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01/target/ProyectoSpringBoot01-1.0.jar started by rusok in /home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01)
+2026-03-09 18:59:51 [main] INFO  c.p.p.ProyectoSpringBoot01Application - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 18:59:52 [main] INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 7001 (http)
+2026-03-09 18:59:52 [main] INFO  o.a.c.core.StandardService - Starting service [Tomcat]
+2026-03-09 18:59:52 [main] INFO  o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-09 18:59:52 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1143 ms
+2026-03-09 18:59:53 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-09 18:59:53 [main] INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 7001 (http) with context path '/'
+2026-03-09 18:59:53 [main] INFO  c.p.p.ProyectoSpringBoot01Application - Started ProyectoSpringBoot01Application in 2.597 seconds (process running for 3.099)
+2026-03-09 19:00:00 [http-nio-7001-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09 19:00:00 [http-nio-7001-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-09 19:00:00 [http-nio-7001-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-03-09 19:00:00 [http-nio-7001-exec-1] WARN  o.s.w.servlet.PageNotFound - No mapping for GET /estudiante
+2026-03-09 19:00:00 [http-nio-7001-exec-1] WARN  o.s.w.servlet.PageNotFound - No endpoint GET /estudiante.
+2026-03-09 19:01:23 [http-nio-7001-exec-7] WARN  o.s.w.servlet.PageNotFound - No mapping for GET /favicon.ico
+2026-03-09 19:01:23 [http-nio-7001-exec-7] WARN  o.s.w.servlet.PageNotFound - No endpoint GET /favicon.ico.
+2026-03-09 19:02:18 [http-nio-7001-exec-9] WARN  o.s.w.servlet.PageNotFound - No mapping for DELETE /estudiante/3
+2026-03-09 19:02:18 [http-nio-7001-exec-9] WARN  o.s.w.servlet.PageNotFound - No endpoint DELETE /estudiante/3.
+2026-03-09 19:33:39 [SpringApplicationShutdownHook] INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-09 19:33:39 [tomcat-shutdown] INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
+2026-03-09 19:33:47 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Starting ProyectoSpringBoot01ApplicationTests using Java 25.0.2 with PID 461906 (started by rusok in /home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01)
+2026-03-09 19:33:47 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 19:33:49 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-09 19:33:49 [main] INFO  c.p.p.ProyectoSpringBoot01ApplicationTests - Started ProyectoSpringBoot01ApplicationTests in 1.985 seconds (process running for 2.999)
+2026-03-09 19:33:54 [main] INFO  c.p.p.ProyectoSpringBoot01Application - Starting ProyectoSpringBoot01Application v1.0 using Java 25.0.2 with PID 462472 (/home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01/target/ProyectoSpringBoot01-1.0.jar started by rusok in /home/rusok/Documentos/workspace-spring-tools-for-eclipse-5.0.1.RELEASE/ProyectoSpringBoot01)
+2026-03-09 19:33:54 [main] INFO  c.p.p.ProyectoSpringBoot01Application - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 19:33:56 [main] INFO  o.s.b.t.TomcatWebServer - Tomcat initialized with port 7001 (http)
+2026-03-09 19:33:56 [main] INFO  o.a.c.core.StandardService - Starting service [Tomcat]
+2026-03-09 19:33:56 [main] INFO  o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-09 19:33:56 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1771 ms
+2026-03-09 19:33:57 [main] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-03-09 19:33:57 [main] INFO  o.s.b.t.TomcatWebServer - Tomcat started on port 7001 (http) with context path '/'
+2026-03-09 19:33:57 [main] INFO  c.p.p.ProyectoSpringBoot01Application - Started ProyectoSpringBoot01Application in 3.475 seconds (process running for 4.035)
+2026-03-09 19:34:04 [http-nio-7001-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09 19:34:04 [http-nio-7001-exec-1] INFO  o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-09 19:34:04 [http-nio-7001-exec-1] INFO  o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2026-03-09 19:54:38 [SpringApplicationShutdownHook] INFO  o.s.b.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-09 19:54:38 [tomcat-shutdown] INFO  o.s.b.t.GracefulShutdown - Graceful shutdown complete
