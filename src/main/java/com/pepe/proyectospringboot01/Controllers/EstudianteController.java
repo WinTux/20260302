@@ -1,5 +1,6 @@
 package com.pepe.proyectospringboot01.Controllers;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.net.URI;
 import java.util.HashMap;
@@ -28,6 +29,8 @@ import tools.jackson.databind.json.JsonMapper;
 
 import com.flipkart.zjsonpatch.Jackson3JsonPatch;
 import com.pepe.proyectospringboot01.Models.Estudiante;
+
+import jakarta.servlet.http.HttpServletResponse;
 
 
 
@@ -127,5 +130,11 @@ public class EstudianteController {
 	}
 	private boolean estaEnElFuturo(int nacimiento) {
 		return nacimiento > java.time.Year.now().getValue();
+	}
+	@GetMapping("/estudiante/pruebacruda")
+	public void ejemploCrudo(HttpServletResponse response) throws IOException{
+		response.setHeader("Codigo-Depuracion", "DEP-108");
+		response.setStatus(200);
+		response.getWriter().println("Éxito");
 	}
 }
