@@ -28,6 +28,7 @@ import tools.jackson.databind.ObjectMapper;
 import tools.jackson.databind.json.JsonMapper;
 
 import com.flipkart.zjsonpatch.Jackson3JsonPatch;
+import com.pepe.proyectospringboot01.Exceptions.EstudianteNoEncontradoException;
 import com.pepe.proyectospringboot01.Models.Estudiante;
 
 import jakarta.servlet.http.HttpServletResponse;
@@ -72,6 +73,8 @@ public class EstudianteController {
 	}
 	@PutMapping("/estudiante/{id}")
 	public ResponseEntity<Object> modificarEstudiante(@PathVariable("id") String id,@RequestBody Estudiante est){
+		if(!estudiantes.containsKey(id))
+			throw new EstudianteNoEncontradoException();
 		estudiantes.remove(id);
 		est.setId(Integer.parseInt(id));
 		estudiantes.put(id, est);
