@@ -22,10 +22,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.fge.jsonpatch.JsonPatch;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.json.JsonMapper;
+
+import com.flipkart.zjsonpatch.Jackson3JsonPatch;
 import com.pepe.proyectospringboot01.Models.Estudiante;
+
+
 
 
 
@@ -34,7 +38,7 @@ import com.pepe.proyectospringboot01.Models.Estudiante;
 public class EstudianteController {
 	//@Autowired
 	//ObjectMapper objectMapper;
-	private ObjectMapper objectMapper = new ObjectMapper();
+	JsonMapper objectMapper = JsonMapper.builder().build();
 	
 	private static Map<String, Estudiante> estudiantes = new HashMap<>();
 	static {
@@ -90,13 +94,13 @@ public class EstudianteController {
 		return new ResponseEntity<>("Se modificó al estudiante "+ id, HttpStatus.OK);
 	}
 	@PatchMapping(path="/estudiante/patch/{id}", consumes="application/json-patch+json")
-	public ResponseEntity<String> editarConJsonPatch(@PathVariable("id") String id, @RequestBody JsonPatch atributosModificados){
+	public ResponseEntity<String> editarConJsonPatch(@PathVariable("id") String id, @RequestBody JsonNode atributosModificados){
 		try {
-			Estudiante estOrig = estudiantes.get(id);
-			JsonNode patcheado = atributosModificados.apply(objectMapper.convertValue(estOrig, JsonNode.class));
-			Estudiante estActualizado = objectMapper.treeToValue(patcheado, Estudiante.class);
-			estudiantes.remove(id);
-			estudiantes.put(id, estActualizado);
+			Estudiante original = estudiantes.get(id);
+	        JsonNode nodoOriginal = objectMapper.valueToTree(original);
+	        JsonNode nodoPatcheado = Jackson3JsonPatch.apply(atributosModificados, nodoOriginal);
+	        Estudiante actualizado = objectMapper.treeToValue(nodoPatcheado, Estudiante.class);
+	        estudiantes.put(id, actualizado);
 			return new ResponseEntity<>("Se modificó al estudiante "+id, HttpStatus.OK);
 		}catch(Exception e) {
 			e.printStackTrace();
