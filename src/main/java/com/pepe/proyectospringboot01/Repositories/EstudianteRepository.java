@@ -1,0 +1,19 @@
+package com.pepe.proyectospringboot01.Repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.pepe.proyectospringboot01.Models.Est;
+
+
+@Repository
+public interface EstudianteRepository extends JpaRepository<Est, Integer>{
+	List<Est> getByCarreraid(int cid);
+	List<Est> findByApellidoAndEstado(String ap, boolean estado);
+	List<Est> findByNombreAndApellido(String nom, String ap);
+	@Query("SELECT e FROM Est e WHERE e.estado = true")
+	List<Est> obtenerEstudiantesActivos();
+}
